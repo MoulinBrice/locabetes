@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get 'users/destroy'
   devise_for :users
   get 'pages/index'
-  root to: "pages#home"
+  root to: "pages#index"
 end
