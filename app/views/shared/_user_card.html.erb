@@ -1,10 +1,9 @@
-<h1>Liste des utilisateurs</h1>
-<p>Find me in app/views/users/index.html.erb</p>
- <% @users.each do |user| %>
+<div class="container">
+
+    <% @users.each do |user| %>
         <h1><%= user.first_name%> <%= user.last_name%></h1>
         <p><%= user.email%></p>
         <p><%= user.address%></p>
         <p><%= user.phone%></p>
-<% end %>
-
-
+    <% end %>
+</div>

@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
     <%= render "shared/navbar" %>
+
+
+  </div>
+    <div class="banner-index img-fluid" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/dz6lwhhko/image/upload/v1668532749/development/locabetes-banner_gfmdki.png')">
+    <div class="container">
+      <h1>Test</h1>
+    </div>
     <%= yield %>
   </body>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 </html>
