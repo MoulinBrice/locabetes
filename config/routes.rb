@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :bookings
   resources :users
   devise_for :users
+  resources :orders
   resources :paks
 end

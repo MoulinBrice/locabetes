@@ -1,2 +1,10 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div>
+  <%= simple_form_for(@user) do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :address %>
+  <%= f.input :phone %>
+  <%= f.input :email %>
+  <%= f.submit %>
+  <% end %>
+</div>
