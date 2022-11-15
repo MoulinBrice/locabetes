@@ -9,8 +9,12 @@
 
 // Your CSS partials
 @import "components/index";
-@import "components/banner";
-@import "components/card_paks";
-
 
 @import "pages/index";
+
+.banner-index {
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0;
+  }
+
