@@ -28,4 +28,3 @@ class UsersController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
   end
 end
-end
