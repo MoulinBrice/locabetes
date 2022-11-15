@@ -1,2 +1,9 @@
 <h1>Booking#new</h1>
+<%= simple_form_for(@booking) do |f| %>
+  <%= f.input :user_id %>
+  <%= f.input :pak_id %>
+  <%= f.input :starts_at %>
+  <%= f.input :ends_at %>
+  <%= f.submit %>
+<% end %>
 <p>Find me in app/views/booking/new.html.erb</p>
