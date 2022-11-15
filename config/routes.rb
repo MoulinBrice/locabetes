@@ -3,12 +3,6 @@ Rails.application.routes.draw do
   resources :orders
   resources :users
   devise_for :users
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  get 'pages/index'
+  resources :paks
   root to: "pages#index"
->>>>>>> master
-=======
->>>>>>> master
 end
