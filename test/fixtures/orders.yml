@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: one
+  pak_id: one
+  order_date: 2022-11-15
+  start_date: 2022-11-15
+  end_date: 2022-11-15
+
+two:
+  user_id: two
+  pak_id: two
+  order_date: 2022-11-15
+  start_date: 2022-11-15
+  end_date: 2022-11-15
