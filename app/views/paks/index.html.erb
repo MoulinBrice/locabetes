@@ -1,10 +1,7 @@
-<h1>Liste des packs disponible</h1>
 
-  <ul>
-    <% @paks.each do |pak| %>
-      <li><%= pak.name %></li>
-      <li><%= pak.description %></li>
-      <li><%= pak.pricing %></li>
-    <% end %>
-  </ul>
+
+
+
+
+<%= render "shared/barre_de_recherche" %>
   <%= render "shared/card_paks" %>

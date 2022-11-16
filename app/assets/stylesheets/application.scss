@@ -20,3 +20,44 @@
 //     padding: 200px 0;
 //   }
 
+// CSS card index
+.card1 {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card1 > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card1 h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card1 p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card1 .card-infos1 {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-infos1 .card-user1 {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
