@@ -27,7 +27,6 @@ class PaksController < ApplicationController
     @pak.destroy
     # No need for app/views/restaurants/destroy.html.erb
     redirect_to paks_path, status: :see_other
-
   end
 
   def search
