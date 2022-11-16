@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&display=swap');
+
+.home-banner{
+    width: 100%;
+    height: 550px;
+    // background-color: gray;
+    display: flex;
+;
+
+}
+.home-banner h1{
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: "Alfa Slab One";
+}
+.home-banner a{
+    border-radius: 10px;
+}
+.banner-text{
+    width: 50%;
+    padding: 80px;
+}
+
+.banner-img{
+    width: 50%;
+}

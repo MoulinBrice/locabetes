@@ -53,16 +53,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_15_143741) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
-  create_table "orders", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "pak_id"
-    t.date "date_order"
-    t.date "date_debut"
-    t.date "date_fin"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "paks", force: :cascade do |t|
     t.string "name"
     t.text "description"
