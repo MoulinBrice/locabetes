@@ -41,4 +41,3 @@ booking3.save
 booking4 = Booking.new(user_id: user4.id, pak_id: pack4.id,starts_at: Time.now, ends_at: Time.now.next_week)
 booking4.save
 
-
