@@ -1,9 +1,15 @@
 <h1>Paks#show</h1>
 <p>Find me in app/views/paks/show.html.erb</p>
 
-<ul>
-      <li><%= @pak.name %></li>
-      <li><%= @pak.description %></li>
-      <li><%= @pak.pricing %></li>
-      <li><%= cl_image_tag @pak.photo.key, height: 300, width: 400, crop: :fill %></li>
-  </ul>
+  
+<div class="card1 col-6 col-md-4">
+  <%= cl_image_tag @pak.photo.key, height: 300, width: 400, crop: :fill %>
+  <div class="card-infos1">
+    <div>
+      <h2><%= @pak.name %> </h2>
+      <p> <%= @pak.description %></p>
+    </div>
+    <h2 class="card-pricing1"><%= @pak.pricing %> </h2>
+  </div>
+</div>
+</div>
