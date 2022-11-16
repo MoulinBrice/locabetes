@@ -4,16 +4,20 @@
     width: 100%;
     height: 550px;
     // background-color: gray;
+    margin-top: 4rem;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
 ;
 
 }
-.home-banner h1{
+.home-banner h1 {
     font-size: 4rem;
     font-weight: bold;
     font-family: "Alfa Slab One";
 }
 .home-banner a{
+    
     border-radius: 10px;
 }
 .banner-text{
@@ -23,4 +27,14 @@
 
 .banner-img{
     width: 50%;
+}
+
+.hero_img {
+  margin-top: 6rem;
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.hide {
+    display: none;
 }

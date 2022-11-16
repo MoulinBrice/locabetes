@@ -1,2 +1,19 @@
 // Import page-specific CSS files here.
 @import "home";
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&display=swap');
+
+
+h1 h2 {
+    font-family: 'Inter', sans-serif;
+}
+
+.cta {
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-image: url("https://images.unsplash.com/photo-1589879727853-f654c6da5368?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3570&q=80");
+    border-radius: 2rem;
+}
