@@ -1,7 +1,9 @@
-<%= simple_form_for(@pak) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :pricing %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
+
+    <%= simple_form_for(@pak) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :pricing %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit %>
+    <% end %>
+

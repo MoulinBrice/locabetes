@@ -1,13 +1,16 @@
-<h1>Paks#show</h1>
-<p>Find me in app/views/paks/show.html.erb</p>
-
-
+<a class="btn btn-primary" href= "<%= edit_pak_path(@pak) %>">Mettre à jours un pack</a></
+<div class="m-6">
   <%= cl_image_tag @pak.photo.key, height: 300, width: 400, crop: :fill %>
-    <div>
+    <div class="card-infos1">
       <h2><%= @pak.name %> </h2>
-      <p> <%= @pak.description %></p>
+        <p> <%= @pak.description %></p>
+          <h2 class="card-pricing1"><%= @pak.pricing  %> </h2>
+            <div>
+        </div>
     </div>
-    <h2 class="card-pricing1"><%= @pak.pricing %> </h2>
   </div>
 </div>
-</div>
+<p><%= link_to "Retourné a l'accueil", paks_path %></p>
+ <%= link_to paks_path(@pak), method: :delete, data: { confirm: "Are you sure?" } %>
+delete
+<% end %>
