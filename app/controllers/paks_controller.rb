@@ -5,6 +5,8 @@ class PaksController < ApplicationController
   end
 
   def show
+    @pak = Pak.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
@@ -23,10 +25,8 @@ class PaksController < ApplicationController
   end
 
   def destroy
-    @pak = Pak.find(params[:id])
     @pak.destroy
-    # No need for app/views/restaurants/destroy.html.erb
-    redirect_to paks_path, status: :see_other
+    redirect_to paks_path
   end
 
   def search
@@ -34,6 +34,7 @@ class PaksController < ApplicationController
   end
 
   def edit
+
   end
 
 private
