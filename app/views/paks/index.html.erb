@@ -1,21 +1,31 @@
+<%# <%= render "shared/card_paks" %>
 <%= render "shared/barre_de_recherche" %>
-  <%# <%= render "shared/card_paks" %>
-<div class="container">
-  <div class = "row ">
-    <% @paks.each do |pak| %>
-        <div class="col-4">
-          <div class="card1">
-            <%= cl_image_tag pak.photo.key, height: 300, width: 400, crop: :fill %>
-            <%= link_to "voir le detail", pak %>
-              <div class="card-infos1">
-                <div>
-                  <h2><%= pak.name %> </h2>
-                  <p> <%= pak.description %></p>
+
+<div class="dropdown p-5 m-3 ">
+  <button class="btn btn-secondary dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">Option</button>
+
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="<%= new_pak_path(@paks) %>">Créé un nouveau pack</a></li>
+  </ul>
+
+  <div class="container">
+    <div class = "row">
+      <% @paks.each do |pak| %>
+          <div class="col-4">
+            <div class="card1">
+              <%= cl_image_tag pak.photo.key, height: 300, width: 400, crop: :fill %>
+              <%= link_to "voir le detail", pak %>
+                <div class="card-infos1">
+                  <div>
+                    <h2><%= pak.name %> </h2>
+                    <p> <%= pak.description %></p>
+                  </div>
+                  <h2 class="card-pricing1"><%= pak.pricing %> </h2>
                 </div>
-                <h2 class="card-pricing1"><%= pak.pricing %> </h2>
-              </div>
+            </div>
           </div>
-        </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
+  <!-- <%= render "shared/card_paks" %>-->
 </div>

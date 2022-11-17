@@ -5,21 +5,13 @@
       <div class="zone-img"><%= cl_image_tag @pak.photo.key, height: 300, width: 400, crop: :fill %></div>
       <div class="reservation">
           <div class="tarif">
-              <p><%= @pak.pricing %> <%= @pak.periode %> </p>
+              <p><%= @pak.pricing %> </p>
               <p><%= @pak.rating %></p>
-          </div>
-          <!-- selection des dates de location -->
-          <<div class="selection date">
-              <!-- app/views/restaurants/new.html.erb -->
-              <%= form_with model: @booking do |f| %>
-                <%= f.input :date, label: "Début de réservation" %>
-                <%= f.input :date, label: "Fin de réservation" %>
-                <%= f.submit %>
-              <% end %>
           </div>
     </div>
   </div>
 </div>
-
-
-
+<p><%= link_to "Retourné a l'accueil", paks_path %></p>
+<%= link_to paks_path(@pak), method: :delete, data: { confirm: "Are you sure?" } do %>
+delete
+<% end %>
