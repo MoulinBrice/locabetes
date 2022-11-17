@@ -23,6 +23,7 @@
     </div>
   </div>
 </div>
-
-
-
+<p><%= link_to "Retourné a l'accueil", paks_path %></p>
+<%= link_to paks_path(@pak), method: :delete, data: { confirm: "Are you sure?" } do %>
+delete
+<% end %>

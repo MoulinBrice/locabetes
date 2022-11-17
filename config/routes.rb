@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :paks do
     resources :bookings, only:[:show, :new, :create]
   end
+  resources :bookings
+  resources :users
+  resources :paks
 end
