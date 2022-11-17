@@ -6,7 +6,10 @@
       <div class="reservation">
 
           <div class="tarif">
+
+  
               <p><strong><%= @pak.pricing %></strong> <!--<%= @pak.dure %>--> </p>
+
               <p><%= @pak.rating %></p>
           </div>
 
@@ -23,6 +26,7 @@
     </div>
   </div>
 </div>
+
 <p><%= link_to "Retourné a l'accueil", paks_path %></p>
 <%= link_to paks_path(@pak), method: :delete, data: { confirm: "Are you sure?" } do %>
 delete
