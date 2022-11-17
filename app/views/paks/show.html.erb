@@ -1,13 +1,25 @@
-<h1>Paks#show</h1>
-<p>Find me in app/views/paks/show.html.erb</p>
+<div class="container">
+  <h1><%= @pak.name %></h1>
 
-
-  <%= cl_image_tag @pak.photo.key, height: 300, width: 400, crop: :fill %>
-    <div>
-      <h2><%= @pak.name %> </h2>
-      <p> <%= @pak.description %></p>
+  <div class="carte-mere d-flex">
+      <div class="zone-img"><%= cl_image_tag @pak.photo.key, height: 300, width: 400, crop: :fill %></div>
+      <div class="reservation">
+          <div class="tarif">
+              <p><%= @pak.pricing %> <%= @pak.periode %> </p>
+              <p><%= @pak.rating %></p>
+          </div>
+          <!-- selection des dates de location -->
+          <<div class="selection date">
+              <!-- app/views/restaurants/new.html.erb -->
+              <%= form_with model: @booking do |f| %>
+                <%= f.input :date, label: "Début de réservation" %>
+                <%= f.input :date, label: "Fin de réservation" %>
+                <%= f.submit %>
+              <% end %>
+          </div>
     </div>
-    <h2 class="card-pricing1"><%= @pak.pricing %> </h2>
   </div>
 </div>
-</div>
+
+
+
