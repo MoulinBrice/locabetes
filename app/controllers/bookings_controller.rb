@@ -1,4 +1,9 @@
+# require "Date"
+
 class BookingsController < ApplicationController
+  before_action :set_booking, only: %i[show]
+  before_action :set_pak, only: %i[:create, :new]
+
   def index
     @bookings = Booking.all
   end
@@ -8,17 +13,26 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @pak = Pak.find(params[:pak_id])
     @bookings = Booking.new
   end
 
   def create
-    @booking = Booking.new(pak_params)
-    if @booking.save
-      redirect_to pak_path(@pak)
+    @pak = Pak.find(params[:pak_id])
+    @booking = Booking.new(booking_params)
 
+    @booking.user = current_user
+    @booking.pak = @pak
+    # @booking.created_at = Date.today
+    # @booking.updated_at = Date.today
+
+    if @booking.save!
+      # raise
+      redirect_to paks_path
     else
-
+      raise
     end
+
   end
 
   def edit
@@ -35,8 +49,17 @@ class BookingsController < ApplicationController
   end
 
   private
-  def pak_params
-    params.require(:pak).permit()
+  def booking_params
+    params.require(:booking).permit(:starts_at, :ends_at)
+  end
+
+  def set_pak
+    @pak = Pak.find(params[:pak_id])
+    raise
+  end
+
+  def set_booking
+    @booking = Booking.find(params[:id])
   end
 
 end

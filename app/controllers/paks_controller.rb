@@ -5,6 +5,8 @@ class PaksController < ApplicationController
   end
 
   def show
+    @pak = Pak.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
@@ -34,6 +36,7 @@ class PaksController < ApplicationController
   end
 
   def edit
+
   end
 
 private

@@ -7,31 +7,31 @@ require "open-uri"
 
 
 
-# packs = Pak.all
-# packs.each do |pack|
-#   pack.destroy
-# end
+packs = Pak.all
+packs.each do |pack|
+  pack.destroy
+end
 
 description="Lorem ipsum dolor sit amet. Aut quia voluptates ea modi quos aut voluptas quia qui odit illo qui natus veniam quo quaerat eius. Rem aperiam quibusdam ut quasi aliquid qui galisum voluptatem et repudiandae velit ab dolorem labore non provident obcaecati. Et ducimus itaque cum eligendi modi aut provident omnis aut harum itaque vel aliquam dolore id provident fuga et aliquid libero!"
-# pack = Pak.new(name: 'Pack1-Boeuf',description: description,pricing: 800)
-# file = URI.open("https://res.cloudinary.com/dz6lwhhko/image/upload/v1668653137/boeuf_s4iiz2.jpg")
-# pack.photo.attach(io: file, filename: "one_bull.jpg", content_type: "image/jpg")
+pack = Pak.new(name: 'Pack1-Boeuf',description: description,pricing: 800)
+file = URI.open("https://res.cloudinary.com/dz6lwhhko/image/upload/v1668653137/boeuf_s4iiz2.jpg")
+pack.photo.attach(io: file, filename: "one_bull.jpg", content_type: "image/jpg")
 # OK
 
-# pack = Pak.new(name: 'Pack2-Boeufs',description: description,pricing: 5000)
-# file = URI.open("https://res.cloudinary.com/dz6lwhhko/image/upload/v1668650653/trio-brahman_pg8u5o.jpg")
-# pack.photo.attach(io: file, filename: "three_bulls.jpg", content_type: "image/jpg")
-# pack.save
+pack = Pak.new(name: 'Pack2-Boeufs',description: description,pricing: 5000)
+file = URI.open("https://res.cloudinary.com/dz6lwhhko/image/upload/v1668650653/trio-brahman_pg8u5o.jpg")
+pack.photo.attach(io: file, filename: "three_bulls.jpg", content_type: "image/jpg")
+pack.save
 
-# pack = Pak.new(name: 'Pack3-moutons',description: description,pricing: 1800)
-# file = URI.open("https://res.cloudinary.com/dz6lwhhko/image/upload/v1668656030/Martinik1_0_uazhkn.jpg")
-# pack.photo.attach(io: file, filename: "three_sheep.jpg", content_type: "image/jpg")
-# pack.save
+pack = Pak.new(name: 'Pack3-moutons',description: description,pricing: 1800)
+file = URI.open("https://res.cloudinary.com/dz6lwhhko/image/upload/v1668656030/Martinik1_0_uazhkn.jpg")
+pack.photo.attach(io: file, filename: "three_sheep.jpg", content_type: "image/jpg")
+pack.save
 
-# pack = Pak.new(name: "Pack4" ,description: description,pricing: 800)
-# file = URI.open("https://res.cloudinary.com/dz6lwhhko/image/upload/v1668650653/0702330631285-web-tete_yeveig.jpg")
-# pack.photo.attach(io: file, filename: "one_dunkey.jpg", content_type: "image/jpg")
-# pack.save
+pack = Pak.new(name: "Pack4" ,description: description,pricing: 800)
+file = URI.open("https://res.cloudinary.com/dz6lwhhko/image/upload/v1668650653/0702330631285-web-tete_yeveig.jpg")
+pack.photo.attach(io: file, filename: "one_dunkey.jpg", content_type: "image/jpg")
+pack.save
 # if pack.photo.attached?
 #   pack.save
 # else

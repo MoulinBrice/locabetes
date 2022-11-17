@@ -2,18 +2,21 @@
   <h1><%= @pak.name %></h1>
 
   <div class="carte-mere d-flex">
-      <div class="zone-img"><%= cl_image_tag @pak.photo.key, height: 300, width: 400, crop: :fill %></div>
+      <div class="zone-img"><%= cl_image_tag @pak.photo.key, height: 300, width: 400, crop: :fill, :class => "rounded-start rounded-3" %></div>
       <div class="reservation">
+
           <div class="tarif">
-              <p><%= @pak.pricing %> <%= @pak.periode %> </p>
+              <p><strong><%= @pak.pricing %></strong> <!--<%= @pak.dure %>--> </p>
               <p><%= @pak.rating %></p>
           </div>
+
           <!-- selection des dates de location -->
-          <<div class="selection date">
-              <!-- app/views/restaurants/new.html.erb -->
-              <%= form_with model: @booking do |f| %>
-                <%= f.input :date, label: "Début de réservation" %>
-                <%= f.input :date, label: "Fin de réservation" %>
+          <div class="selection date">
+
+              <%= simple_form_for [@pak, @booking] do |f| %>
+                <%= f.input :starts_at, label: "Début de location", as: :date, html5: true %>
+                <%= f.input :ends_at, label: "Fin de location", as: :date, html5: true %>
+                <%# f.input :idpak %>
                 <%= f.submit %>
               <% end %>
           </div>
