@@ -38,5 +38,4 @@ class BookingsController < ApplicationController
   def pak_params
     params.require(:pak).permit()
   end
-
 end
