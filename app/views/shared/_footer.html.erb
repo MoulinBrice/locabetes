@@ -1,18 +1,48 @@
-<div id="footer" class="container d-flex">
-    <div class="zone1 col-3">
-        <%= link_to "Home page", root_path, :class => "footer-link" %>
-        <%= link_to "About us", page_about_path, :class => "footer-link" %>
-        <%= link_to "Nos produits", paks_path, :class => "footer-link" %>
-
+<footer class="footer">
+    <div class="container">
+        <div class="d-flex flex-row justify-content-between">
+            <p class="footer_slogan col-4"><a href="https://www.youtube.com/watch?v=mReSNcDrWCA">Votre débroussailleuse 2.0 vous attend.</a></p>
+            
+            <ul class="footer_column d-flex flex-column">
+              <li class="column_title">Explore</li>
+              <li class="footer_item"><%= link_to "Accueil", root_path %></li>
+              <li class="footer_item"><%= link_to "À propos", page_about_path %></li>
+              <li class="footer_item"><%= link_to "Paks", paks_path %></li>
+              <li class="footer_item"><a href="#">Jobs</a></li>
+            </ul>
+            <ul class="footer_column d-flex flex-column">
+              <li class="column_title">Filtres</li>
+              <li class="footer_item"><a href="#">Ânes</a></li>
+              <li class="footer_item"><a href="#">Bœuf</a></li>
+              <li class="footer_item"><a href="#">Cabrits</a></li>
+              <li class="footer_item"><a href="#">Chevals</a></li>
+              <li class="footer_item"><a href="#">Moutons</a></li>
+            </ul>
+            <ul class="footer_column d-flex flex-column">
+              <li class="column_title">Ressources</li>
+              <li class="footer_item"><a href="#">Communauté</a></li>
+              <li class="footer_item"><a href="#">Tarifs</a></li>
+              <li class="footer_item"><a href="#">Support</a></li>
+            </ul>
+        </div>
+        <div class="footer_copyright d-flex flex-row justify-content-between">
+            <ul class="social-wrapper col-6 d-flex flex-row">
+                <li class="footer_item"><a href="#">Conditions d'utilisation</a></li>
+                <li class="footer_item"><a href="#">Vie privée</a></li>
+                <li class="footer_item"><a href="#">Contactez-nous</a></li>
+                <li class="footer_item d-flex flex-row align-items-center">
+                    <a href="#">Statut</a>
+                    <% if user_signed_in? %>
+                            <div class="bg-success"></div>
+                        <% else %>
+                            <div class="bg-danger"></div>
+                        <% end %>
+                </li>
+            </ul>
+            <ul class="footer_social-wrapper d-flex flex-row">
+              <li class="footer_social-icon"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+              <li class="footer_social-icon"><a href="https://github.com/MoulinBrice/locabetes"><i class="fa-brands fa-github"></i></a></li>
+            </>
+        </div>
     </div>
-
-    <div class="col-3">
-        <a href="#" alt="Lien instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" alt="Lien instagram"><i class="fa-brands fa-facebook"></i></i></a>
-        <a href="#" alt="Lien instagram"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-
-    <div class="col-3">
-
-    </div>
-</div>
+</footer>

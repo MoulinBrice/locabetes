@@ -51,8 +51,6 @@ user3.save
 user4 = User.new(first_name: 'Leo', last_name: 'BRIVAL', email: 'leo@gmail.com',password: 'locabetes',address: 'lewagon martinique',role:'admin',phone:"0696010101")
 user4.save
 
-
-<<<<<<< HEAD
 booking1 = Booking.new(user_id: user1.id, pak_id: pack1.id,starts_at: Time.now, ends_at: Time.now.next_week)
 booking1.save
 booking2 = Booking.new(user_id: user2.id, pak_id: pack2.id,starts_at: Time.now, ends_at: Time.now.next_week)
@@ -61,14 +59,3 @@ booking3 = Booking.new(user_id: user3.id, pak_id: pack3.id,starts_at: Time.now, 
 booking3.save
 booking4 = Booking.new(user_id: user4.id, pak_id: pack4.id,starts_at: Time.now, ends_at: Time.now.next_week)
 booking4.save
-=======
-
-# booking1 = Booking.new(user_id: user1.id, pak_id: pack1.id,starts_at: Time.now, ends_at: Time.now.next_week)
-# booking1.save
-# booking2 = Booking.new(user_id: user2.id, pak_id: pack2.id,starts_at: Time.now, ends_at: Time.now.next_week)
-# booking2.save
-# booking3 = Booking.new(user_id: user3.id, pak_id: pack3.id,starts_at: Time.now, ends_at: Time.now.next_week)
-# booking3.save
-# booking4 = Booking.new(user_id: user4.id, pak_id: pack4.id,starts_at: Time.now, ends_at: Time.now.next_week)
-# booking4.save
->>>>>>> c36f6c822a978e4fd13c1817cc7aa3e2c0a71fef
