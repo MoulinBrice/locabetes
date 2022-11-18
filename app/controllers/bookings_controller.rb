@@ -5,7 +5,9 @@ class BookingsController < ApplicationController
   before_action :set_pak, only: %i[:create, :new]
 
   def index
-    @bookings = Booking.all
+    # affiche la derniere commande du client
+    @lastUserBooking = Booking.find(params[:format])
+
   end
 
   def show
@@ -28,7 +30,8 @@ class BookingsController < ApplicationController
 
     if @booking.save!
       # raise
-      redirect_to paks_path
+      # redirect_to paks_path
+      redirect_to bookings_path(@booking)
     else
       raise
     end
