@@ -39,7 +39,7 @@ pack.save
 # end
 
 # kdeljdjfofjlflfz
-# creation utilisateur
+  # creation utilisateur
 User.destroy_all
 user1 = User.new(first_name: 'Brice', last_name: 'MOULIN', email: 'brice@gmail.com',password: 'locabetes',address: 'lewagon martinique',role:'admin',phone:"0696010101")
 user1.save

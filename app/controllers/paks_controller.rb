@@ -40,7 +40,7 @@ class PaksController < ApplicationController
 private
 
   def pak_params
-    params.require(:pak).permit(:name, :description, :pricing, :photo)
+    params.require(:pak).permit(:name,:owner_name, :description, :pricing, :photo)
   end
 
   def set_pak_id
