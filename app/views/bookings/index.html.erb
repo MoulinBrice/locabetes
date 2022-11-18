@@ -1,7 +1,73 @@
-<h1>Booking#index</h1>
-<ol>
-  <% @bookings.each do |booking| %>
-    <li> <%= booking.user_id %></li>
-    <li><%= booking.pak_id %></li>
-  <% end %>
-</ol>
+ <div class="container py-5  ">
+  <h1 class="fw-bold text-decoration-underline"><a href="/" class="text-decoration-none text-dark"><i class="fa-sharp fa-solid fa-house"></i></a>Votre réservation</h1>
+
+  <div class="d-flex  ">
+
+      <!--Première colonne -->
+      <div class="col-6">
+          <div class="book-intro">
+          <p>
+            Exellent choix !<br>
+            Nous vous remerçions pour votre réservation
+          </p>
+          <p>
+              <i class="fa-solid fa-thumbs-up fs-2 me-5 "></i>
+          </p>
+      </div>
+
+      <div class="book-resa mt-4">
+          <h2>Détails de la réservation</h2>
+          <div class="resume-resa d-flex">
+              <div>
+                <p><strong>Date de début</strong></p>
+                <p><%= @lastUserBooking.starts_at.strftime("%a, %d %b %Y")%></p>
+              </div>
+
+              <div>
+                <p><strong>Date de fin</strong></p>
+                <p><%= @lastUserBooking.ends_at.strftime("%a, %d %b %Y")%></p>
+              </div>
+          </div>
+          <hr style="width:500px">
+      </div>
+    </div>
+
+    <!--Seconde colonne -->
+    <div class="col-6">
+        <div class="resum-tarif d-flex  ">
+            <%= cl_image_tag(@lastUserBooking.pak.photo.key, width: 100, height: 100  , crop: :fill, :class => "sho-img") %>
+            <p><%=@lastUserBooking.pak.name%><br>
+                <%=@lastUserBooking.pak.description%>
+            </p>
+        </div>
+        <div class="div-paiement"><a href="/" class="btn-paiement"> Payer la commande</a></div>
+
+
+
+
+    </div>
+
+  </div>
+<!--fin des deux colonne-->
+</div>
+
+<div class="container">
+    <h2>Choisissez comment vous souhaitez payer</h2>
+    <div class="select-paiement">
+        <p><strong>Payez la totalité</strong><br>Payez le total maintenant et vous aurez terminé.</p>
+        <p>
+          <strong><%= @lastUserBooking.pak.pricing %> € </strong>
+          <input type="radio">
+        </p>
+    </div>
+
+    <div class="select-paiement">
+        <p><strong>Payez une partie maintenant et l'autre plus tard</strong><br>
+        Payez <%= @lastUserBooking.pak.pricing / 2%> € maintenant et le solde (<%= @lastUserBooking.pak.pricing / 2%> €)<br>sera prélevé automatiquement via le même mode de paiement le 13 mars 2023. Aucuns frais supplémentaires.</p>
+        <p>
+          <strong><%= @lastUserBooking.pak.pricing / 2   %> € </strong>
+          <input type="radio">
+        </p>
+    </div>
+
+</div>

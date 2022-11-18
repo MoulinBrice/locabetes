@@ -1,33 +1,51 @@
-<div class="container">
-  <h1><%= @pak.name %></h1>
+<div class="container py-5  ">
+  <h1 class="fw-bold text-decoration-underline"><%= link_to "<", paks_path, :class => "text-decoration-none text-dark" %>    <%= @pak.name %></h1>
 
-  <div class="carte-mere d-flex">
-      <div class="zone-img"><%= cl_image_tag @pak.photo.key, height: 300, width: 400, crop: :fill, :class => "rounded-start rounded-3" %></div>
+  <div class="carte-mere d-flex justify-content-between">
+      <div class="zone-img">
+          <%= cl_image_tag @pak.photo.key, height: 450, width: 500, crop: :fill, :class => "img-show" %>
+      </div>
+
       <div class="reservation">
 
-          <div class="tarif">
+          <div class="d-flex align-items-center">
+              <p class="fs-2"><strong><%= @pak.pricing %> €</strong> <%= @pak.dure %> </p>
 
-  
-              <p><strong><%= @pak.pricing %></strong> <!--<%= @pak.dure %>--> </p>
-
-              <p><%= @pak.rating %></p>
+              <p class="show-rating ms-5"><i class="fa-solid fa-star"></i> <%= @pak.rating %></p>
           </div>
 
           <!-- selection des dates de location -->
-          <div class="selection date">
-
+          <div class="show-date">
               <%= simple_form_for [@pak, @booking] do |f| %>
-                <%= f.input :starts_at, label: "Début de location", as: :date, html5: true %>
-                <%= f.input :ends_at, label: "Fin de location", as: :date, html5: true %>
-                <%# f.input :idpak %>
-                <%= f.submit %>
+                <div class="d-flex justify-content-around mt-3">
+                    <div><%= f.input :starts_at, label: "Début de location", as: :date, html5: true, required: true, :input_html => { :class => 'fdate' } %></div>
+                   <div><%= f.input :ends_at, label: "Fin de location", as: :date, html5: true, required: true, :input_html => { :class => 'ldate' } %></div>
+                </div>
+                <div class="d-flex justify-content-center mb-3" data-controller="show-btn">
+                    <%= f.submit "réserver maintenant",  :class => "show-btn btn btn-primary", 'data-action': "click->show-btn#clicBtn" %>
+                </div>
               <% end %>
           </div>
+          <div>
+            <hr>
+              <p><%= @pak.description%></p>
+          </div>
     </div>
+
   </div>
+
+  <p class="mt-5">
+    <strong class="fs-3"><span class="show-color">Locabêtes</span>Cover</strong><br>
+    Chaque réservation comprend une protection gratuite en cas d'annulation par l'hôte, d'inexactitudes dans la description du logement, ainsi que d'autres problèmes comme les difficultés d'accès au logement.
+    En savoir plus
+  </p>
 </div>
 
-<p><%= link_to "Retourné a l'accueil", paks_path %></p>
+
+
+
+ <!--<p><%= link_to "Retourné a l'accueil", paks_path %></p>
 <%= link_to paks_path(@pak), method: :delete, data: { confirm: "Are you sure?" } do %>
 delete
-<% end %>
+<% end %>-->
+
