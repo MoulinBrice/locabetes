@@ -1,0 +1,58 @@
+.book-intro{
+    border: 2px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: gray;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px 10px;
+    width: 500px;
+}
+
+.resume-resa{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+}
+
+.select-paiement{
+    width: 50%;
+    // background-color: gray;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+.pricing{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.resum-tarif{
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+.sho-img{
+    border-radius: 10px;
+    margin-right: 5px;
+}
+.btn-paiement{
+    text-decoration: none;
+    color: white;
+    background-color:#015C5D;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+
+}
+.div-paiement{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    // background-color: gray;
+}
