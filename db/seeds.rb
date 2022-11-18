@@ -38,7 +38,7 @@ pack.save
 #   puts "erreur de lien d'image"
 # end
 
-
+# kdeljdjfofjlflfz
 # creation utilisateur
 User.destroy_all
 user1 = User.new(first_name: 'Brice', last_name: 'MOULIN', email: 'brice@gmail.com',password: 'locabetes',address: 'lewagon martinique',role:'admin',phone:"0696010101")
