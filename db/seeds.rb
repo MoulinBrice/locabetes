@@ -51,7 +51,7 @@ user3 = User.new(first_name: 'Dimitri', last_name: 'ELIE', email: 'dimitri@gmail
 user3.save
 user4 = User.new(first_name: 'Leo', last_name: 'BRIVAL', email: 'leo@gmail.com',password: 'locabetes',address: 'lewagon martinique',role:'admin',phone:"0696010101")
 user4.save
-
+# test
 # <!--
 # booking1 = Booking.new(user_id: user1.id, pak_id: pack1.id,starts_at: Time.now, ends_at: Time.now.next_week)
 # booking1.save
