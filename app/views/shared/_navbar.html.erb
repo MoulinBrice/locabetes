@@ -2,9 +2,7 @@
     <div class="container">
         <div class="nav-wrapper d-flex flex-row justify-content-between">
             <%= link_to "/" do %>
-                <!--<%= cl_image_tag("https://res.cloudinary.com/dz6lwhhko/image/upload/v1668532750/development/locabetes_epjerj.png", height: 60, width: 60) %>-->
                 <img class="nav_logo" src="https://www.shutterstock.com/image-vector/goats-cartoon-character-chewing-grass-260nw-1896327754.jpg" alt="" srcset="">
-                <!--<p class="nav_logo">Locabêtes</p>-->
             <% end %>
     
             <ul class="nav-action d-flex flex-row align-items-center">
@@ -12,6 +10,7 @@
                     <li class="nav-item"><%= link_to "Accueil", "/" %></li>
                     <li class="nav-item"><%= link_to "Paks", "paks" %></li>
                     <li class="nav-item"><%= link_to "À propos", page_about_path %></li>
+                    <li class="nav-item"><%= link_to "Profil", user %></li>
                     <li class="nav-item dropdown">
                         <%= image_tag "https://images.unsplash.com/photo-1625019030820-e4ed970a6c95?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80", class: "nav_img", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navDropdown">
