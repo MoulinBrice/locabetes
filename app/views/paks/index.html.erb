@@ -17,10 +17,10 @@
               <%= cl_image_tag pak.photo.key, height: 300, width: 400, crop: :fill %>
                 <div class="card-infos1">
                   <div >
-                    <h2 class="text-body text-decoration-none "><%= pak.name %> </h2>
+                    <h2 class="text-body text-decoration-none "><%= pak.name %> </h2><br>
                     <p class="text-body text-decoration-none"> <%= pak.description %></p>
                   </div>
-                  <p id="no-underline" class="card-pricing1 text-body"><%= pak.pricing %> </p>
+                  <p style="font-size: 16px!important;" id="no-underline" class="card-pricing1 text-body"><h3><%= pak.pricing %>€</h3> </p>
                 </div>
             </div>
           <% end %>
